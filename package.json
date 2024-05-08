@@ -1,0 +1,20 @@
+{
+  "name": "nextjs-big-codebase",
+  "version": "0.1.0",
+  "packageManager": "yarn@4.0.2",
+  "private": true,
+  "scripts": {
+    "generate": "node codegen.js",
+    "next-build": "NODE_OPTIONS=\"--max_old_space_size=32768\" next build",
+    "build": "rm -rf .next && yarn generate && yarn next-build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "14.2.3",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "engines": {
+    "node": ">=18.18.2"
+  }
+}
